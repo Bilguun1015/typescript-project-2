@@ -13,7 +13,12 @@ const myCar = carMakers.pop();
 // Prevent incompatible values to add
 carMakers.push(100);
 
-// Help with 'map' other methods
+// Help with 'map' or other built-in methods
 carMakers.map((car: string): string => {
   return car.toUpperCase();
 });
+
+// Flexible types
+const importantDates: (Date | String)[] = [new Date()];
+importantDates.push('2030-10-10');
+importantDates.push(new Date());
