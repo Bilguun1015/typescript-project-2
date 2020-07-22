@@ -16,18 +16,21 @@ console.log(vehicle.color);
 // this is an error because protected can only be accessed in the class or subclass
 // vehicle.honk();
 
-// class Car extends Vehicle {
-//   // usage of prive only occurs if you dont want it to be accessed by other devs
-//   // drive()can only be accessed in the class
-//   private drive(): void {
-//     console.log('vroom');
-//   }
+class Car extends Vehicle {
+  constructor(public wheels: number, color: string) {
+    super(color);
+  }
+  // usage of prive only occurs if you dont want it to be accessed by other devs
+  // drive()can only be accessed in the class
+  private drive(): void {
+    console.log('vroom');
+  }
 
-//   startDrivingProcess(): void {
-//     this.drive();
-//     this.honk();
-//   }
-// }
+  startDrivingProcess(): void {
+    this.drive();
+    this.honk();
+  }
+}
 
-// const mycar = new Car();
-// mycar.startDrivingProcess();
+const mycar = new Car(4, 'red');
+mycar.startDrivingProcess();
