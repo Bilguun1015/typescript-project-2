@@ -46,7 +46,6 @@ printAnything<string>(['a', 'b', 'c']);
 printAnything(['a', 'b', 'c']);
 
 // Generic Constraints
-
 class Car {
   print() {
     console.log('I am a car');
